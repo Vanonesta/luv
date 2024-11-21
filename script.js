@@ -1,7 +1,10 @@
 function start() {
   // Sembunyikan tombol mulai dan tampilkan gombalan
   document.querySelector('.start-btn').classList.add('hidden');
-  document.querySelector('#gombalan').classList.remove('hidden');
+  
+  setTimeout(() => {
+    document.querySelector('#gombalan').classList.remove('hidden');
+  }, 1000); // Tampilkan setelah 1 detik
 
   // Mulai memutar musik
   const music = document.getElementById('background-music');
@@ -11,7 +14,10 @@ function start() {
 function showQuestion() {
   // Sembunyikan gombalan dan tampilkan pertanyaan
   document.querySelector('#gombalan').classList.add('hidden');
-  document.querySelector('#question').classList.remove('hidden');
+  
+  setTimeout(() => {
+    document.querySelector('#question').classList.remove('hidden');
+  }, 1000); // Tampilkan setelah 1 detik
 }
 
 function showResponse(answer) {
@@ -25,7 +31,10 @@ function showResponse(answer) {
   }
 
   document.getElementById('question').classList.add('hidden');
-  responseContainer.classList.remove('hidden');
+  
+  setTimeout(() => {
+    responseContainer.classList.remove('hidden');
+  }, 1000); // Tampilkan setelah 1 detik
 }
 
 function reset() {
