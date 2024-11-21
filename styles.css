@@ -1,0 +1,105 @@
+/* Gaya Latar dengan Gradien Bergerak */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  color: white;
+  text-align: center;
+
+  background: linear-gradient(45deg, #ff9a8b, #ff6f61, #ff4a4a, #e63e3e);
+  background-size: 400% 400%;
+  animation: gradient-move 10s infinite;
+}
+
+/* Animasi Gradien */
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.container {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  padding: 30px;
+  width: 90%;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  animation: fade-in 1.5s ease-in-out;
+}
+
+.title, .gombal-text, .question-text, #response {
+  font-size: 2rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.gombal-text {
+  font-style: italic;
+  color: #ff9a8b;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.answer {
+  background: white;
+  color: #ff4a4a;
+  border: none;
+  padding: 10px 25px;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.answer:hover {
+  transform: scale(1.2);
+  background: #ff4a4a;
+  color: white;
+  box-shadow: 0 8px 15px rgba(255, 74, 74, 0.5);
+}
+
+.btn {
+  background: #ff6f61;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  background: #e63e3e;
+  box-shadow: 0 8px 15px rgba(230, 62, 62, 0.5);
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fade-in 1s forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

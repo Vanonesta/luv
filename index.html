@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perasaan untukmu</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Judul Awal -->
+    <h1 class="title">Ada sesuatu yang ingin aku katakan...</h1>
+    <button class="btn start-btn" onclick="start()">Mulai</button>
+
+    <!-- Gombalan -->
+    <div id="gombalan" class="hidden">
+      <h2 class="gombal-text fade-in">
+        "Kalau aku jadi bulan, aku nggak butuh bintang.  
+        Karena yang aku butuhkan cuma kamu yang menerangi hidupku. 🌙❤️"
+      </h2>
+      <button class="btn next-btn" onclick="showQuestion()">Lanjutkan</button>
+    </div>
+
+    <!-- Pertanyaan -->
+    <div id="question" class="hidden">
+      <h2 class="question-text fade-in">
+        Aku sudah lama ingin bilang...  
+        Maukah kamu menjadi bagian dari hidupku? ❤️
+      </h2>
+      <div class="buttons">
+        <button class="answer yes fade-in" onclick="showResponse('yes')">Ya, Aku Mau!</button>
+        <button class="answer no fade-in" onclick="showResponse('no')">Maaf, Aku Tidak Bisa...</button>
+      </div>
+    </div>
+
+    <!-- Respons -->
+    <div id="response-container" class="hidden">
+      <h2 id="response" class="fade-in"></h2>
+      <button class="btn reset-btn" onclick="reset()">Ulangi</button>
+    </div>
+  </div>
+
+  <!-- Musik Latar -->
+  <audio id="background-music" loop>
+    <source src="music.mp3" type="audio/mpeg">
+     </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
